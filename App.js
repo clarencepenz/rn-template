@@ -6,24 +6,30 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+
+//Screens
+
 import {
-  View,
-  Text,
-} from 'react-native';
+  OnBoarding,
+  NewPage
+} from './app/screens'
 
-
+const Stack = createStackNavigator();
 const App = () => {
   return (
-    <>
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>
-          First Edit 🎉 😄💞
-        </Text>
-    </View>
-    </>
+   <NavigationContainer>
+     <Stack.Navigator>
+       <Stack.Screen name="OnBoard" component={OnBoarding} options={{ headerShown: false }}/>
+       <Stack.Screen name="NewPage" component={NewPage} options={{ headerShown: false }}/>
+     </Stack.Navigator>
+   </NavigationContainer>
   );
 };
 
 
-export default App;
+export default  App;
