@@ -5,17 +5,52 @@ import {
  StyleSheet,
  TouchableOpacity,
  Text,
- Animated
+ Animated,
+ Image,
+ View
 } from 'react-native'
 
-import { theme } from '../../constants'
+import { theme, data } from '../../constants'
 
 const { COLORS, FONTS, SIZES } = theme;
 
 const OnBoarding = ({navigation}) => {
+  function renderContent() {
+    return(
+      <Animated.ScrollView
+          horizontal
+          pagingEnabled
+          scrollEnabled
+          snapToAlignment='center'
+          showsHorizontalScrollIndicator={false}
+      >
+          {data.map((item, index) => (
+            <View
+              key={index}
+              style={{width: SIZES.width}}
+            >
+              <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+                <Image
+                  source={item.img}
+                  resizeMode='contain'
+                  style={{
+                      width: "100%",
+                      height: "100%"
+                  }}
+                />
+              </View>
+              <Text style={{color: COLORS.black, textAlign: 'center', padding: SIZES.padding}}>{item.title}</Text>
+            </View>
+          ))}
+      </Animated.ScrollView>
+    )
+  }
+
   return (
     <SafeAreaView style={styles.container}>
-        <Text >OnBoarding 🙊</Text>
+      <Text style={{padding: SIZES.padding}} >OnBoarding 🙊</Text>
+      {renderContent()}
+        {/* 
         <Button
         title="😵"
         onPress={() => navigation.navigate('NewPage')}
@@ -24,7 +59,7 @@ const OnBoarding = ({navigation}) => {
          onPress={() => navigation.navigate('NewPage')}
       >
         <Text>take an 🍎</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </SafeAreaView>
   )
 }
@@ -34,8 +69,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center', 
     alignItems: 'center', 
-    color: COLORS.white,
-    backgroundColor: COLORS.black
+    color: COLORS.black,
+    backgroundColor: COLORS.white
   }
 })
 

@@ -1,4 +1,4 @@
-import { images } from './images'
+import { images } from './index'
 
 const { OnBoarding1, OnBoarding2, OnBoarding3 } = images;
 
@@ -11,13 +11,13 @@ const onboard = [
 
   }, 
   {
-    title: "Hello",
+    title: "Hi",
     description: "lore, jkjxsj xbbijniwninwxinx",
     img: OnBoarding2
 
   },
   {
-    title: "Hello",
+    title: "Master",
     description: "lore, jkjxsj xbbijniwninwxinx",
     img: OnBoarding3
 
