@@ -5,19 +5,19 @@ const { OnBoarding1, OnBoarding2, OnBoarding3 } = images;
 
 const onboard = [
   {
-    title: "Hello",
+    title: "Hello 💥",
     description: "lore, jkjxsj xbbijniwninwxinx",
     img: OnBoarding1
 
   }, 
   {
-    title: "Hi",
+    title: "Hi 👋",
     description: "lore, jkjxsj xbbijniwninwxinx",
     img: OnBoarding2
 
   },
   {
-    title: "Master",
+    title: "Master 🍎",
     description: "lore, jkjxsj xbbijniwninwxinx",
     img: OnBoarding3
 
