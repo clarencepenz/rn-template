@@ -103,7 +103,6 @@ const OnBoarding = ({navigation}) => {
               >
                 <Text style={{ ...FONTS.h3, color: COLORS.white}}>{ completed ? "Lets's go" : "Skip"}</Text>
               </TouchableOpacity>
-              {/* <Text style={{color: COLORS.black, textAlign: 'center', padding: SIZES.padding}}>{item.title}</Text> */}
             </View>
           ))}
       </Animated.ScrollView>
@@ -148,7 +147,6 @@ const OnBoarding = ({navigation}) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <Text style={{padding: SIZES.padding}} >OnBoarding 🙊</Text> */}
       <View>
         {renderContent()}
       </View>
@@ -156,18 +154,6 @@ const OnBoarding = ({navigation}) => {
         {dots()}
       </View>
 
-
-
-        {/* 
-        <Button
-        title="😵"
-        onPress={() => navigation.navigate('NewPage')}
-      />
-      <TouchableOpacity
-         onPress={() => navigation.navigate('NewPage')}
-      >
-        <Text>take an 🍎</Text>
-      </TouchableOpacity> */}
     </SafeAreaView>
   )
 }
